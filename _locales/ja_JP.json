@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "app": {
+      "name": "i18n の例"
+    }
+  },
+
+  "content":{
+  "title": "エクスポート・シンボリックリンク",
+  "subtitle": "Eagleで選択中のアイテムに対してシンボリックリンクを作成します。",
+  "labelLinkType": "リンクの種類",
+  "radioSymlink": "シンボリックリンク",
+  "radioHardlink": "ハードリンク",
+  "hintLinkType": "シンボリックリンクは元のファイルを参照します。ハードリンクは同一ドライブ内に別のファイルエントリを作成します。",
+  "labelHowItWorks": "使い方",
+  "stepSelectItems": "Eagleのフォルダ内でアイテムを選択します。",
+  "stepChooseDestination": "表示されるダイアログで出力先フォルダを選びます。",
+  "stepFolderSelected": "Eagleでフォルダが選択されている場合は、同名のサブフォルダ内にリンクが作成されます。",
+  "stepNoFolder": "フォルダが選択されていない場合は、出力先ルート直下にリンクが作成されます。",
+  "hintNote": "注意: ハードリンクは同一ドライブ内でのみ使用できます。シンボリックリンクはOSの設定によって権限が必要になる場合があります。",
+  "buttonExport": "選択をエクスポート",
+  "ready": "準備完了。",
+  "exportingLinks": "リンクを作成中...",
+  "noItemsSelected": "アイテムが選択されていません。Eagleで選択してから再試行してください。",
+  "noItemsSelectedOnLoad": "アイテムが選択されていません。Eagleでアイテムを選択してください。",
+  "exportCanceled": "エクスポートをキャンセルしました。",
+  "exportSuccess": "{{dir}} に {{count}} 件のリンクを作成しました。",
+  "exportWithErrors": "{{dir}} に {{count}} 件のリンクを作成しました。",
+  "errorsTitle": "エラー:",
+  "missingFilePath": "ファイルパスがありません",
+  "errorEperm": "Windows の開発者モードを有効にする必要があります。URL を参考に開発者モードを有効にしてください。",
+  "errorExdev": "ハードリンクは同じディスク上に作成する必要があります。",
+  "helpUrl": "http://demo.dd"
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script type="text/javascript" src="js/plugin.js"></script>
+    <style>
+        :root {
+            --bg: #f6f4ef;
+            --panel: #ffffff;
+            --ink: #1e1b16;
+            --muted: #6b6257;
+            --accent: #2f6fed;
+            --border: #e4ded6;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Segoe UI", "Yu Gothic UI", "Meiryo", Arial, sans-serif;
+            margin: 0;
+            background: radial-gradient(1200px 800px at 10% 10%, #fff8e6 0, #f6f4ef 55%, #f1ede7 100%);
+            color: var(--ink);
+        }
+        .wrap {
+            padding: 20px 18px 24px;
+        }
+        h1 {
+            margin: 0 0 6px;
+            font-size: 18px;
+            letter-spacing: 0.2px;
+        }
+        .subtitle {
+            color: var(--muted);
+            margin: 0 0 14px;
+            font-size: 12px;
+        }
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            box-shadow: var(--shadow);
+        }
+        .section {
+            margin-top: 12px;
+        }
+        .label {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .radio-card {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #fbfaf8;
+        }
+        .radio-card input {
+            accent-color: var(--accent);
+        }
+        .hint {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+        .btn {
+            margin-top: 12px;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 10px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn:active {
+            transform: translateY(1px);
+        }
+        #message {
+            margin-top: 12px;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+        .notice {
+            border-radius: 10px;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            background: #f8f5f0;
+            color: #12325f;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+        }
+        .notice.info {
+            border-color: #cbd7f7;
+            background: #eef3ff;
+            color: #12325f;
+        }
+        .notice.success {
+            border-color: #bfe7c6;
+            background: #e9f7ec;
+            color: #0f5132;
+        }
+        .notice.error {
+            border-color: #f3b9b9;
+            background: #fdecec;
+            color: #7a1c1c;
+        }
+        .muted {
+            color: var(--muted);
+        }
+        .list {
+            margin: 6px 0 0;
+            padding-left: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 data-i18n="title">Export Symlink</h1>
+        <p class="subtitle" data-i18n="subtitle">Create symlinks for the currently selected items in Eagle.</p>
+
+        <div class="panel">
+            <div class="section">
+                <div class="label" data-i18n="labelLinkType">Symlink type</div>
+                <div class="radio-group">
+                    <label class="radio-card">
+                        <input type="radio" name="linkType" value="symlink" checked>
+                        <span data-i18n="radioSymlink">Symlink (Symbolic Link)</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="linkType" value="hardlink">
+                        <span data-i18n="radioHardlink">Hard Link</span>
+                    </label>
+                </div>
+                <div class="hint" data-i18n="hintLinkType">
+                    Symlink points to the original file. Hard Link creates another file entry on the same drive.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="label" data-i18n="labelHowItWorks">How it works</div>
+                <ul class="list muted">
+                    <li data-i18n="stepSelectItems">Select items inside an Eagle folder.</li>
+                    <li data-i18n="stepChooseDestination">Choose a destination folder when prompted.</li>
+                    <li data-i18n="stepFolderSelected">If a folder is selected in Eagle, symlinks are created inside a subfolder with the same name.</li>
+                    <li data-i18n="stepNoFolder">If no folder is selected, symlinks are created directly in the export destination root.</li>
+                </ul>
+                <div class="hint" data-i18n="hintNote">
+                    Note: Hard links only work on the same drive. Symlinks may require permission depending on OS settings.
+                </div>
+            </div>
+
+            <button id="exportSymlinkBtn" class="btn" data-i18n="buttonExport">Export Selected</button>
+            <div id="message"><div class="notice info" data-i18n="ready">Ready.</div></div>
+        </div>
+    </div>
+</body>
+</html>

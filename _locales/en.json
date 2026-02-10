@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "app": {
+      "name": "i18n Example"
+    }
+  },
+
+    "content":{
+  "title": "Export Symlink",
+  "subtitle": "Create symlinks for the currently selected items in Eagle.",
+  "labelLinkType": "Symlink type",
+  "radioSymlink": "Symlink (Symbolic Link)",
+  "radioHardlink": "Hard Link",
+  "hintLinkType": "Symlink points to the original file. Hard Link creates another file entry on the same drive.",
+  "labelHowItWorks": "How it works",
+  "stepSelectItems": "Select items inside an Eagle folder.",
+  "stepChooseDestination": "Choose a destination folder when prompted.",
+  "stepFolderSelected": "If a folder is selected in Eagle, symlinks are created inside a subfolder with the same name.",
+  "stepNoFolder": "If no folder is selected, symlinks are created directly in the export destination root.",
+  "hintNote": "Note: Hard links only work on the same drive. Symlinks may require permission depending on OS settings.",
+  "buttonExport": "Export Selected",
+  "ready": "Ready.",
+  "exportingLinks": "Exporting links...",
+  "noItemsSelected": "No items selected. Select items in Eagle and try again.",
+  "noItemsSelectedOnLoad": "No items selected. Please select items in Eagle.",
+  "exportCanceled": "Export canceled.",
+  "exportSuccess": "Exported {{count}} link(s) to {{dir}}",
+  "exportWithErrors": "Exported {{count}} link(s) to {{dir}}",
+  "errorsTitle": "Errors:",
+  "missingFilePath": "missing file path",
+  "errorEperm": "You need to enable Windows Developer Mode. Please refer to the URL and enable Developer Mode.",
+  "errorExdev": "Hard links must be created on the same disk.",
+  "helpUrl": "http://demo.dd"
+    }
+}

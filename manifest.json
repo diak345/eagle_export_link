@@ -1,0 +1,17 @@
+{
+    "id": "4a2236cf-8ee3-4a8d-99ac-6b1cbbf15a47",
+    "version": "1.0.1",
+    "platform": "all",
+    "arch": "all",
+    "name": "export symlink",
+    "logo": "/icon.png",
+    "keywords": ["export", "link","symlink"],
+    "devTools": true,
+    "fallbackLanguage": "en",
+    "languages":["en","ja_JP"],
+    "main": {
+        "url": "index.html",
+        "width": 640,
+        "height": 480
+    }
+}
