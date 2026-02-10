@@ -109,7 +109,7 @@ const exportSymlinks = async () => {
 	}
 	const linkType = getSelectedLinkType();
 	const linkFn = linkType === 'hardlink' ? createHardlink : createSymlink;
-	const epermHelpUrl = "https://developer.eagle.cool/plugin-api/ja-jp/tutorial/i18n";
+	const epermHelpUrl = "https://github.com/diak345/eagle_export_link";
 	let successCount = 0;
 	const errors = [];
 	let aborted = false;

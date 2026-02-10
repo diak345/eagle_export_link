@@ -6,7 +6,7 @@
     "name": "export symlink",
     "logo": "/icon.png",
     "keywords": ["export", "link","symlink"],
-    "devTools": true,
+    "devTools": false,
     "fallbackLanguage": "en",
     "languages":["en","ja_JP"],
     "main": {

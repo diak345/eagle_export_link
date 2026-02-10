@@ -30,6 +30,6 @@
   "missingFilePath": "missing file path",
   "errorEperm": "You need to enable Windows Developer Mode. Please refer to the URL and enable Developer Mode.",
   "errorExdev": "Hard links must be created on the same disk.",
-  "helpUrl": "http://demo.dd"
+  "helpUrl": "https://github.com/diak345/eagle_export_link"
     }
 }
